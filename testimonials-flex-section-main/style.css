@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap');
+
+:root {
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --VeryDarkBlackishBlue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --LightGray: hsl(0, 0%, 81%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+
+    --font-size: 13px;
+    --w500: 500;
+    --w600: 600;
+    --ff-barlow: 'Barlow Semi Condensed', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--LightGrayishBlue);
+}
+
+/*! artical/content styling  */
+article.article-container {
+    background: var(--LightGray);
+    padding: 1rem;
+    margin: 1rem;
+    font-family: var(--ff-barlow);
+    border-radius: .5rem;
+    display: flex;
+    flex-flow: column;
+    gap: .8rem;
+    color: var(--White);
+}
+
+article.DanielClifford {
+    background: var(--Moderate-violet) url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 20%;
+}
+
+article.JonathanWalters {
+    background-color: var(--VeryDarkGrayishBlue);
+}
+
+article.JeanetteHarmon,
+article.KiraWhittle {
+    background-color: var(--White);
+    color: var(--VeryDarkBlackishBlue) !important;
+}
+
+article.PatrickAbrams {
+    background-color: var(--VeryDarkBlackishBlue);
+}
+
+article.article-container>div#top {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+article.article-container>div#top>#article-image {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    border: .15rem solid var(--LightGray);
+}
+
+article.PatrickAbrams>div#top>#article-image {
+    border-color: var(--Moderate-violet);
+}
+
+article.article-container>div#top>div.flex-name-feild {
+    font-size: 1.2rem;
+}
+
+article.article-container>div#top>div.flex-name-feild {
+
+    color: inherit;
+}
+
+article.article-container>div#top>div.flex-name-feild :last-child {
+    color: var(--LightGray);
+}
+
+article.article-container>div#mid>h1 {
+    font-size: 1.9rem;
+    color: inherit;
+}
+
+article.article-container>div#bottom>p {
+    font-size: 1.2rem;
+    color: var(--LightGray);
+}
+
+@media only screen and (min-width:700px) {
+
+    body {
+        height: 100dvh;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .container {
+        width: min(85%, 75rem);
+        height: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .container>.left-container {
+        display: flex;
+        flex-flow: column;
+        gap: 1rem;
+    }
+
+    .container>.left-container>.top-flex-unit,
+    .container>.left-container>.bottom-flex-unit {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .container>.left-container {
+        display: flex;
+        gap: .8rem;
+        /* justify-content: space-between; */
+        /* height: 100% !important; */
+    }
+
+    .container>.right-container {
+        width: 90rem;
+        gap: .6rem;
+        /* height: 100%; */
+    }
+
+    article.article-container {
+        margin: 0;
+        gap: 0.6rem;
+        height: 100%;
+    }
+
+    article.article-container>div#top>#article-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    article.article-container>div#top>div.flex-name-feild {
+        font-size: .8rem;
+    }
+
+    article.article-container>div#mid>h1 {
+        font-size: 1.3rem;
+    }
+
+    article.article-container>div#bottom>p {
+        font-size: 1rem;
+    }
+
+    article.article-container {
+        height: 100%;
+    }
+}

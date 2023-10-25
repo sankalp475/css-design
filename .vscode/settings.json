@@ -1,0 +1,21 @@
+{
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": false,
+    "editor.rename.enablePreview": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "css.format.enable": true,
+    "html.format.enable": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features",
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[js]": {
+        "editor.defaultFormatter": "ms-vscode.js-debug"
+    },
+    "editor.autoIndent": "advanced",
+    "editor.detectIndentation": false,
+}

@@ -2,24 +2,44 @@
     font-family: "Minecraft";
     src: url(../font/Minecraft.ttf);
 }
-:root {
-    --root-bg-light:#eef4fb;
-    --blue-light:#40abfc;
-    --white:#fff;
-    --ff-Minecraft: "Minecraft";
+
+@font-face {
+    font-family: "TheWitcher";
+    src: url(../font/Thewitcher-jnOj.ttf);
 }
+
+:root {
+    --root-bg-light: #eef4fb;
+    --blue-light: #40abfc;
+    --white: #fff;
+    --cherry-red:rgba(238,12,50,1);
+    --ff-Minecraft: "Minecraft";
+    --ff-witcher: "TheWitcher";
+}
+
 * {
-    margin:0;
+    margin: 0;
     box-sizing: border-box;
 }
+
 body {
     height: 100vh;
-    background-color: var(--root-bg-light);
+    /* backgroud-color: var(--root-bg-light); */
+   background: linear-gradient(-90deg, rgba(0, 0, 0, 0.932) 70%, transparent 100%),url("../images/ray-so-export.png");
+   background-repeat: no-repeat;
+   background-position: -56% 57%;
+   background-size: 100% ;
+   transform: rotate(20);
 }
+
 header.header {
-    width:100%;
-    padding: 1.2rem;
-    background:var(--white);
+    width: 100%;
+    /* background: rgba(3, 3, 3, 0.178); */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.041);
+    /* backdrop-filter: blur(106.5px); */
+    -webkit-backdrop-filter: blur(6.5px);
+    /* border-radius: 10px; */
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
 }
 
 .container {
@@ -27,48 +47,69 @@ header.header {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-  align-items: center;
+    align-items: center;
 }
 
-header.header > .container {
+header.header>.container {
     padding: 2rem;
 }
 
-header.header > .container > h1 {
+header.header>.container>h1 {
     text-transform: uppercase;
-    font-size: 2rem;
-    font-family: var(--ff-Minecraft);
+    font-size: 5rem;
+    font-family: var(--ff-witcher);
     text-align: center;
+    background: -webkit-linear-gradient(109.6deg, #6708ff 32.4%,rgb(209, 9, 43)  58.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.card-container > .container {
+.card-container>.container {
     padding: 1rem;
 }
 
-ul.list-itme-container {
+ul.list-item-container {
+    
+    margin: .5rem;
+    padding: 1rem;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1200px;
-    justify-content: center;
-    margin:.1rem;
-    padding: .2rem;
 }
 
-li.list-itme-box {
+ul li.list-item-box{
+    margin: .51rem;
+    border: 2px solid #fff;
+    color: var(--white);
     list-style-type: none;
-    background-color: var(--white);
+    /* width: 300px; */
+    /* height: 100px; */
     display: flex;
-    padding: .1rem;
-    border-radius: .5rem;
-    justify-content: space-between;
-    width: 320px;
-    margin: 0 .5rem;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff-witcher);
+    border-radius: 12px;
+    padding: .51rem;
 }
-li.list-itme-box > a {
-    width: 100%;
-    padding: .82rem;
-    text-align: center;
-    text-decoration: none;
-    color:black;
-    text-shadow: 0 0 3px #f70f0f, 0 0 5px #ffffff; 
+
+ul li > .preview {
+    width: 303px;
+}
+
+ul li.list-item-box > a {
+    color: var(--white);
+    padding: .7rem 0;
+    transition: .3s ease-in-out;
+    font-size: 1.5rem;
+}
+ul li.list-item-box > a:hover {
+    color: var(--cherry-red);
+}
+
+ul li.list-item-box > p.lable {
+    background: -webkit-linear-gradient(109.6deg, #6708ff 32.4%,rgb(209, 9, 43)  58.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: .3rem;
+    border-radius: 40px;
 }
