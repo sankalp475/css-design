@@ -36,6 +36,39 @@ header.header > .container {
 
 header.header > .container > h1 {
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: var(--ff-Minecraft);
+    text-align: center;
+}
+
+.card-container > .container {
+    padding: 1rem;
+}
+
+ul.list-itme-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    justify-content: center;
+    margin:.1rem;
+    padding: .2rem;
+}
+
+li.list-itme-box {
+    list-style-type: none;
+    background-color: var(--white);
+    display: flex;
+    padding: .1rem;
+    border-radius: .5rem;
+    justify-content: space-between;
+    width: 320px;
+    margin: 0 .5rem;
+}
+li.list-itme-box > a {
+    width: 100%;
+    padding: .82rem;
+    text-align: center;
+    text-decoration: none;
+    color:black;
+    text-shadow: 0 0 3px #f70f0f, 0 0 5px #ffffff; 
 }
