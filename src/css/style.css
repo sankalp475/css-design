@@ -186,6 +186,20 @@ div.project-card>.right-box img {
     border-radius: 1rem;
 }
 
-@media only screen and (max-width:900) {
-    
+@media only screen and (max-width: 900px) {
+    /* div.project-card .left-box{
+        width: 100%;
+    } */
+    div.project-card {
+        display: flex;
+        flex-direction: column-reverse !important;
+    }
+    div.project-card  > p#bg-number {
+        left: -30px;
+        top: -50px;
+        --LightGray: hsla(0, 89%, 51%, 0.322);
+    }
+    section.card-container > .container {
+        padding: 0;
+    }
 }
