@@ -7,12 +7,19 @@
 // }
 // let i = 0;
 // const JsonToHtml = (jsonData) => {
-    
+
 // }
 // fetchJson(JsonToHtml)
 
 window.onload = () => {
     window.onscroll = (e) => {
-        console.log(document.body.scrollTop)
+        let current = window.scrollY;
+        console.log(current)
+        let text = document.querySelector('h1[class="htitle"]');
+        if (current > 50 || current > 50) {
+            text.style.fontSize = `3.51rem`;
+        } else {
+            text.style.fontSize = "5.5rem";
+        }
     }
 }
