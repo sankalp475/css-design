@@ -12,7 +12,7 @@
     --root-bg-light: #eef4fb;
     --blue-light: #40abfc;
     --white: #fff;
-    --cherry-red:rgba(238,12,50,1);
+    --cherry-red: rgba(238, 12, 50, 1);
     --ff-Minecraft: "Minecraft";
     --ff-witcher: "TheWitcher";
 }
@@ -25,11 +25,11 @@
 body {
     height: 100vh;
     /* backgroud-color: var(--root-bg-light); */
-   background: linear-gradient(-90deg, rgba(0, 0, 0, 0.932) 70%, transparent 100%),url("../images/ray-so-export.png");
-   background-repeat: no-repeat;
-   background-position: -56% 57%;
-   background-size: 100% ;
-   transform: rotate(20);
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.932) 70%, transparent 100%), url("../images/ray-so-export.png");
+    background-repeat: no-repeat;
+    background-position: -56% 57%;
+    background-size: 100%;
+    transform: rotate(20);
 }
 
 header.header {
@@ -59,7 +59,7 @@ header.header>.container>h1 {
     font-size: 5rem;
     font-family: var(--ff-witcher);
     text-align: center;
-    background: -webkit-linear-gradient(109.6deg, #6708ff 32.4%,rgb(209, 9, 43)  58.8%);
+    background: -webkit-linear-gradient(109.6deg, #6708ff 32.4%, rgb(209, 9, 43) 58.8%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -69,14 +69,14 @@ header.header>.container>h1 {
 }
 
 ul.list-item-container {
-    
+
     margin: .5rem;
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
 }
 
-ul li.list-item-box{
+ul li.list-item-box {
     margin: .51rem;
     border: 2px solid #fff;
     color: var(--white);
@@ -92,22 +92,29 @@ ul li.list-item-box{
     padding: .51rem;
 }
 
-ul li > .preview {
+ul li>.preview {
     width: 303px;
 }
 
-ul li.list-item-box > a {
+ul li.list-item-box>a {
     color: var(--white);
     padding: .7rem 0;
+    /* width: 279px; */
     transition: .3s ease-in-out;
     font-size: 1.5rem;
 }
-ul li.list-item-box > a:hover {
+
+ul li.list-item-box>a:hover {
     color: var(--cherry-red);
 }
 
-ul li.list-item-box > p.lable {
-    background: -webkit-linear-gradient(109.6deg, #6708ff 32.4%,rgb(209, 9, 43)  58.8%);
+ul li.list-item-box>p.description {
+    width: 279px;
+    text-align: center;
+}
+
+ul li.list-item-box>p.lable {
+    background: -webkit-linear-gradient(109.6deg, #6708ff 32.4%, rgb(209, 9, 43) 58.8%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: .3rem;

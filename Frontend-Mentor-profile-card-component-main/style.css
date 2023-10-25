@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+
+    --darkcyan: hsl(185, 75%, 39%);
+    --vd-desaturatedBlue: hsl(229, 23%, 23%);
+    --grayishBlue: hsl(227, 10%, 46%);
+    --darkgray: hsl(0, 0%, 59%);
+    
+    --base-size: 18px;
+    --400: 400;
+    --700: 700; 
+
+    --kumbh-sans: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/images/bg-pattern-top.svg) 
+    ,url(/images/bg-pattern-bottom.svg); 
+    background-repeat: no-repeat, no-repeat;
+    /* background-size: 50%; */
+    background-position:right 50vw bottom 35vh, left 50vw top 50vh;
+    background-color: var(--darkcyan);
+}
+
+div.card {
+    border-radius: 10px;
+    background: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+main.content-box > img {
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #fff;
+    position: relative;
+    top: -65px;
+}
+div.card > main.content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--darkgray);
+    padding: 0 0 30px 0;
+}
+
+main.content-box { position: relative; }
+div.profile-info {
+    text-align: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+div.profile-info > div{ 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 50px;
+    line-height: 80px;
+}
+div.profile-info > div > h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: var(--kumbh-sans);
+    text-transform: capitalize;
+    margin-right: 10px;
+    color: var(--vd-desaturatedBlue);
+}
+
+div.profile-info > div > p {
+    font-family: var(--kumbh-sans);
+    color: var(--darkgray);
+    font-size: 1.1rem;
+}
+div.profile-info > p {
+    font-family: var(--kumbh-sans);
+    color: var(--darkgray);
+    text-transform: capitalize;
+    font-weight: var(--400);
+}
+
+
+div.card > footer {
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+div.card > footer > div > p.Followers,
+div.card > footer > div > p.Likes,
+div.card > footer > div > p.Photos { 
+    font-size: 1.54rem;
+    font-family: var(--kumbh-sans);
+    margin: 0;
+    font-weight: var(--700);
+    color: var(--vd-desaturatedBlue);
+}
+div.card > footer > div > p[about] {
+    font-size: .9rem;
+    font-family: var(--kumbh-sans);
+    color: var(--grayishBlue);
+    text-transform: capitalize;
+    margin: 0;
+    line-height: 30.5px;
+}
