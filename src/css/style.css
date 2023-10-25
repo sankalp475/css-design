@@ -10,9 +10,13 @@
 
 :root {
     --root-bg-light: #eef4fb;
+    --LightGray: hsla(0, 0%, 87%, 0.322);
+    --c1: #021027;
+    --c2: #000000;
     --blue-light: #40abfc;
     --white: #fff;
-    --cherry-red: rgba(238, 12, 50, 1);
+    --white-alpha: #fff;
+    --red: rgba(238, 12, 50, 1);
     --ff-Minecraft: "Minecraft";
     --ff-witcher: "TheWitcher";
 }
@@ -24,30 +28,42 @@
 
 body {
     height: 100vh;
-    /* backgroud-color: var(--root-bg-light); */
-    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.932) 70%, transparent 100%), url("../images/ray-so-export.png");
-    background-repeat: no-repeat;
-    background-position: -56% 57%;
+    background: black;
+    background-image: url("../images/hero-dark@90.dba36cdf.jpg");
+    background-attachment: fixed;
+    /* background-repeat: no-repeat; */
     background-size: 100%;
-    transform: rotate(20);
+    position: relative;
+}
+
+body::before {
+    position: fixed;
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(148 163 184 / 0.05)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+    background-repeat: repeat;
+    opacity: .5;
+    top: 0;
+  left: 0;
 }
 
 header.header {
     width: 100%;
-    /* background: rgba(3, 3, 3, 0.178); */
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.041);
-    /* backdrop-filter: blur(106.5px); */
-    -webkit-backdrop-filter: blur(6.5px);
-    /* border-radius: 10px; */
-    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .container {
     width: min(90%, 75rem);
     margin: 0 auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    transition: .4s liner ease-in-out;
+    /* justify-content: center;
+    align-items: center; */
 }
 
 header.header>.container {
@@ -56,67 +72,120 @@ header.header>.container {
 
 header.header>.container>h1 {
     text-transform: uppercase;
-    font-size: 5rem;
+    font-size: 6rem;
     font-family: var(--ff-witcher);
-    text-align: center;
-    background: -webkit-linear-gradient(109.6deg, #6708ff 32.4%, rgb(209, 9, 43) 58.8%);
+    background: -webkit-linear-gradient(90deg, var(--blue-light) 22.4%, var(--red) 80.8%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    width: 525.3px;
+}
+
+.card-container {
+    margin: 23.8rem auto;
 }
 
 .card-container>.container {
-    padding: 1rem;
+    padding: 0 2rem;
 }
 
-ul.list-item-container {
-
-    margin: .5rem;
-    padding: 1rem;
+div.data-container {
     display: flex;
     flex-wrap: wrap;
+    row-gap: 1rem;
 }
 
-ul li.list-item-box {
-    margin: .51rem;
-    border: 2px solid #fff;
+div.project-card {
+    background: linear-gradient(to right, transparent, #03030348 60%);
+    /* border: 1px solid rgba(235, 235, 235, 0.034); */
+    backdrop-filter: blur(5px);
+    display: flex;
+    /* height: max(20rem, 5vh); */
+    border-radius: .51rem;
+    position: relative;
+    z-index: 45;
+}
+
+div.project-card>.left-box,
+div.project-card>.right-box {
+    flex: 1;
+}
+
+div.project-card>.left-box {
+    padding: 1rem;
     color: var(--white);
-    list-style-type: none;
-    /* width: 300px; */
-    /* height: 100px; */
     display: flex;
     flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    /* gap: 1rem; */
+    justify-content: space-between;
+}
+div.project-card > p#bg-number {
     font-family: var(--ff-witcher);
-    border-radius: 12px;
-    padding: .51rem;
+    color: var(--LightGray);
+    font-size: 10rem;
+    position: absolute;
+    z-index: 70;
+    left:-20px;
+    top:-30px;
 }
 
-ul li>.preview {
-    width: 303px;
-}
-
-ul li.list-item-box>a {
+div.project-card>.left-box>.pTitle {
+    font-size: 2rem;
+    font-family: var(--ff-witcher);
     color: var(--white);
-    padding: .7rem 0;
-    /* width: 279px; */
+    /* text-decoration: underline; */
+    transition: .5s linear ease-in-out;
+    z-index: 999;
+}
+
+div.project-card>.left-box>.pTitle a:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+div.project-card>.left-box>.pTitle>a {
+    text-decoration: none;
     transition: .3s ease-in-out;
-    font-size: 1.5rem;
+    color: #fff;
 }
 
-ul li.list-item-box>a:hover {
-    color: var(--cherry-red);
+.pDiscription {
+    font-family: var(--ff-witcher);
+    height: 3rem;
+    flex: 1;
+    line-height: 1.7rem;
+    display: flex;
+    align-items: center;
+    width: 76%;
+    z-index: 99;
 }
 
-ul li.list-item-box>p.description {
-    width: 279px;
-    text-align: center;
+.label-container {
+    height: 3rem;
+    width: 100%;
+    align-items: center;
+    display: flex;
 }
 
-ul li.list-item-box>p.lable {
-    background: -webkit-linear-gradient(109.6deg, #6708ff 32.4%, rgb(209, 9, 43) 58.8%);
+.label-container>p.label {
+    font-family: var(--ff-witcher);
+    font-size: 1rem;
+    background: linear-gradient(to right, var(--red) 20%, var(--blue-light) 90% );
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding: .3rem;
-    border-radius: 40px;
+    color: transparent;
+    outline: 2px solid var(--red);
+    padding: 3px 15px;
+    margin: 0 .4rem;
+    border-radius: 1rem;
+}
+
+div.project-card>.right-box img {
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+@media only screen and (max-width:900) {
+    
 }
