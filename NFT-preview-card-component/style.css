@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+
+    --Softblue: hsl(215, 51%, 70%);
+    --Verydarkblue: hsl(217, 54%, 11%);
+    --Verydark_blue: hsl(216, 50%, 16%);
+    --Very_dark_blue: hsl(215, 32%, 27%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Cyan-transparent: hsla(178, 100%, 50%, 0.336);
+    --White: hsl(0, 0%, 100%);
+
+    --font-size: 18px;
+    --font-Outfit: 'Outfit', sans-serif;
+    --300: 300;
+    --400: 400;
+    --600: 600;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Verydarkblue);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.container {
+    /* flex  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card_wrapper {
+    background-color: var(--Verydark_blue);
+    border-radius: 14px;
+    padding: 15px;
+    max-width: 295px;
+    max-height: 820px;
+}
+
+.card_wrapper > .image_wrapper {
+    position: relative;
+    transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) linear ;
+    padding: 0px;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+.card_wrapper >.image_wrapper >img {
+    width: 100%;
+    
+}
+
+.card_wrapper > .image_wrapper::after { 
+    content: url(./images/icon-view.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--Cyan-transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: .5s linear ease-out;
+}
+
+.card_wrapper > .image_wrapper:hover::after {
+    visibility: visible;
+}
+
+.card_wrapper > .bottom_wrapper {
+    margin: 15px 0 0 0;
+}
+
+.card_wrapper > .bottom_wrapper > .info_box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--White);
+    font-family: var(--font-Outfit);
+    border-bottom: 1px solid var(--Very_dark_blue);
+    padding-bottom: 15px !important;
+}
+
+
+.card_wrapper > .bottom_wrapper > .info_box > h1 {
+    font-size: 1.3rem;
+}
+
+.card_wrapper > .bottom_wrapper > .info_box > h1:hover {
+    color: var(--Cyan);
+    cursor:  pointer;
+}
+
+.info_box > p {
+    font-size: 1rem;
+    font-family: var(--font-Outfit);
+    color: var(--Softblue)
+}
+
+.info_box > div.value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.info_box > .value > .etheriam {
+    color: var(--Cyan);
+    display: flex;
+}
+
+.info_box > .value > .etheriam::before {
+    content: url(images/icon-ethereum.svg);
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+}
+
+.info_box > .value > .time {
+    color: var(--Softblue);
+    display: flex;
+}
+
+.info_box > .value > .time::before {
+   content: url(images/icon-clock.svg);
+   display: flex;
+   align-items: center;
+   padding-right: 5px;
+}
+
+.card_wrapper > .bottom_wrapper > .info_box ~ div.owner_info {
+    display: flex;
+    align-items: center;
+    color: var(--Softblue);
+    font-family: var(--font-Outfit);
+    height: 100%;
+    padding: 12px 0 0 0;
+}
+
+.image-avatar {
+    display: flex;
+    align-items: center;
+    margin-right:10px;
+}
+
+.image-avatar > img  {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+.owner_info p > span {
+    color: var(--White);
+}

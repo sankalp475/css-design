@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Outfit:wght@400;800&display=swap");
+
+:root {
+	/*! color */
+	--White: hsl(0, 0%, 100%);
+	--Light-gray: hsl(212, 45%, 89%);
+	--Grayish-blue: hsl(220, 15%, 55%);
+	--Dark-blue: hsl(218, 44%, 22%);
+
+	/*! font-family/size */
+	--font-size: 15px;
+	--Fraunces: "Fraunces", serif;
+	--Montserrat: "Montserrat", sans-serif;
+	--Outfit: "Outfit", sans-serif;
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: var(--Light-gray);
+}
+div.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh !important;
+}
+
+div.grid-box {
+	width: 300px;
+	height: 430px;
+	border-radius: 15px;
+	padding: 12px;
+	background-color: var(--White);
+}
+
+div.grid-box >
+div.qr-code {
+	border-radius: 13px;
+	overflow: hidden;
+	width: 100%;
+	height: 60%;
+}
+div.grid-box >
+div.qr-code >
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+div.text-discription h1 {
+	font-family: var(--Montserrat);
+	margin: 19px 0;
+	padding: 0 14px 0 12px;
+	font-size: 18px;
+	text-align: center;
+}
+
+div.text-discription p {
+	text-align: center;
+	padding: 0 16px;
+	font-family: var(--Outfit);
+	color: var(--Grayish-blue);
+}
