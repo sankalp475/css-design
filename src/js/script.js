@@ -5,7 +5,7 @@ const fetchJson = async (handler) => {
     const JsonData = await res.json()
     return (handler instanceof Function) ? handler(JsonData) : JsonData
 }
-let i = 0;
+// let i = 0;
 const JsonToHtml = (jsonData) => {
     for (const obj of jsonData) {
         let itemElement = document.createElement(Object.keys(obj))
@@ -30,23 +30,23 @@ const JsonToHtml = (jsonData) => {
                             } else {
                                 let innerSubtag = document.createElement(keys)
                                 for (const attr in subKeys[keys]) {
-                                    if( attr == '@class' || attr == '@src' || attr == '@alt') {
-                                        innerSubtag.setAttribute(attr.slice(1),subKeys[keys][attr])
+                                    if (attr == '@class' || attr == '@src' || attr == '@alt') {
+                                        innerSubtag.setAttribute(attr.slice(1), subKeys[keys][attr])
                                     } else {
-                                        if(!(subKeys[keys][attr] instanceof Array)) innerSubtag.textContent=subKeys[keys][attr]; else 
-                                        // console.log("40: <-", innerSubtag, attr,)
-                                        for(const keyValue of subKeys[keys][attr]) {
-                                            let newTag = document.createElement(attr);
-                                            // if()
-                                            if(keyValue['@class'] != undefined) {
-                                                newTag.className = keyValue['@class'];
-                                                newTag.textContent = keyValue['#text']
-                                            } else {
-                                                newTag.setAttribute('href', keyValue['@href']) ;
-                                                newTag.textContent = keyValue['#text']
+                                        if (!(subKeys[keys][attr] instanceof Array)) innerSubtag.textContent = subKeys[keys][attr]; else
+                                            // console.log("40: <-", innerSubtag, attr,)
+                                            for (const keyValue of subKeys[keys][attr]) {
+                                                let newTag = document.createElement(attr);
+                                                // if()
+                                                if (keyValue['@class'] != undefined) {
+                                                    newTag.className = keyValue['@class'];
+                                                    newTag.textContent = keyValue['#text']
+                                                } else {
+                                                    newTag.setAttribute('href', keyValue['@href']);
+                                                    newTag.textContent = keyValue['#text']
+                                                }
+                                                innerSubtag.appendChild(newTag)
                                             }
-                                            innerSubtag.appendChild(newTag)
-                                        }
                                     }
                                 }
                                 subKeyTags.appendChild(innerSubtag)

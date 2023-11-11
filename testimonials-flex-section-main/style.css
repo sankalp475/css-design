@@ -8,7 +8,7 @@
     --LightGray: hsl(0, 0%, 81%);
     --LightGrayishBlue: hsl(210, 46%, 95%);
 
-    --font-size: 13px;
+    --font-size: .8125rem;
     --w500: 500;
     --w600: 600;
     --ff-barlow: 'Barlow Semi Condensed', sans-serif;
@@ -23,17 +23,62 @@
 body {
     margin: 0;
     padding: 0;
+    display: flex;
+    height: 100dvh;
+    align-items: center;
+    position: relative;
     background: var(--LightGrayishBlue);
 }
 
-/*! artical/content styling  */
+main.container {
+    width: min(85%, 1200px);
+    height: 35rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* border:.0625rem solid red; */
+    gap: .5rem;
+}
+
+div.left-container,
+div.right-container {
+    /* border: 1px solid blue; */
+    gap: .5rem;
+}
+
+div.left-container {
+    display: flex;
+    flex-flow: column;
+    flex: 2;
+    height: 100%;
+    gap: .5rem;
+}
+
+/* div.left-container * {
+    border: 1px solid black;
+    gap: .5rem;
+} */
+div.top-flex-unit,
+div.bottom-flex-unit {
+    /* border: 3px solid orange; */
+    display: flex;
+    height: 50%;
+    gap: .5rem;
+}
+
+div.right-container {
+    height: 100%;
+    width: 260px;
+}
+
 article.article-container {
     background: var(--LightGray);
     padding: 1rem;
-    margin: 1rem;
     font-family: var(--ff-barlow);
     border-radius: .5rem;
     display: flex;
+    justify-content: space-between;
     flex-flow: column;
     gap: .8rem;
     color: var(--White);
@@ -62,13 +107,13 @@ article.PatrickAbrams {
 article.article-container>div#top {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1.1rem;
 }
 
 article.article-container>div#top>#article-image {
     border-radius: 100%;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border: .15rem solid var(--LightGray);
 }
 
@@ -77,7 +122,7 @@ article.PatrickAbrams>div#top>#article-image {
 }
 
 article.article-container>div#top>div.flex-name-feild {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 article.article-container>div#top>div.flex-name-feild {
@@ -90,82 +135,51 @@ article.article-container>div#top>div.flex-name-feild :last-child {
 }
 
 article.article-container>div#mid>h1 {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     color: inherit;
 }
 
 article.article-container>div#bottom>p {
-    font-size: 1.2rem;
+    font-size: 0.93rem;
     color: var(--LightGray);
 }
 
-@media only screen and (min-width:700px) {
-
-    body {
-        height: 100dvh;
-        display: flex;
-        /* justify-content: center; */
-        align-items: center;
-    }
-
+@media only screen and (max-width:700px) {
     .container {
-        width: min(85%, 75rem);
-        height: 80%;
+        width: min(85%, 1200px);
         margin: auto;
         display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .container>.left-container {
-        display: flex;
         flex-flow: column;
-        gap: 1rem;
+        align-items: center;
+        position: relative;
+        border: .0625rem solid red;
+        height: 100% !important;
+        gap: 0;
     }
-
-    .container>.left-container>.top-flex-unit,
-    .container>.left-container>.bottom-flex-unit {
-        display: flex;
-        gap: 1rem;
+    div.left-container,
+    div.right-container {
+        margin: .5rem 0 .5rem 0;
+        flex: 0;
+        gap: 0;
     }
-
-    .container>.left-container {
-        display: flex;
-        gap: .8rem;
-        /* justify-content: space-between; */
-        /* height: 100% !important; */
-    }
-
-    .container>.right-container {
-        width: 90rem;
-        gap: .6rem;
-        /* height: 100%; */
-    }
-
-    article.article-container {
-        margin: 0;
-        gap: 0.6rem;
+    div.top-flex-unit ,
+    div.bottom-flex-unit {
         height: 100%;
+        flex-flow: column;
+        gap: 0;
     }
-
-    article.article-container>div#top>#article-image {
-        width: 30px;
-        height: 30px;
-    }
-
-    article.article-container>div#top>div.flex-name-feild {
-        font-size: .8rem;
-    }
-
-    article.article-container>div#mid>h1 {
-        font-size: 1.3rem;
-    }
-
-    article.article-container>div#bottom>p {
-        font-size: 1rem;
-    }
-
-    article.article-container {
+    div.left-container {
         height: 100%;
+        margin: 2rem 0;
     }
+    article.article-container {
+        margin: .5rem 0;
+        width: 100%;
+    }
+
+    /* article.article-container { 
+        width: 100% !important; 
+        margin: .5rem 0;
+        flex: 1;
+    } */
 }

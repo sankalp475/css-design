@@ -14,8 +14,8 @@
                         "@class": "pTitle",
                         "a": [
                             {
-                                "@href": "./Frontend-Mentor-order-summary-component/index.html",
-                                "#text": "Frontend-Mentor-order-summary-component"
+                                "@href": "testimonials-flex-section-main/index.html",
+                                "#text": "Frontend-Mentor-testimonials-flex-section-main"
                             }
                         ]
                     },
@@ -40,7 +40,7 @@
                 {
                     "@class": "right-box",
                     "img": {
-                        "@src": "./src/images/Frontend-Mentor-order-summary-component.png",
+                        "@src": "./src/images/testimonials-flex-section-main.png",
                         "@alt": ""
                     }
                 }
@@ -62,7 +62,7 @@
                         "@class": "pTitle",
                         "a": [
                             {
-                                "@href": "./Frontend-Mentor-order-summary-component/index.html",
+                                "@href": "./order-summary-component/index.html",
                                 "#text": "Frontend-Mentor-order-summary-component"
                             }
                         ]
