@@ -23,55 +23,22 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    height: 100dvh;
-    align-items: center;
-    position: relative;
     background: var(--LightGrayishBlue);
 }
-
+/* Updated Code */
 main.container {
-    width: min(85%, 1200px);
-    height: 35rem;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    position: relative;
-    /* border:.0625rem solid red; */
-    gap: .5rem;
+    min-height: 100dvh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em ;
 }
 
-div.left-container,
-div.right-container {
-    /* border: 1px solid blue; */
-    gap: .5rem;
+.container ,section{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-
-div.left-container {
-    display: flex;
-    flex-flow: column;
-    flex: 2;
-    height: 100%;
-    gap: .5rem;
-}
-
-/* div.left-container * {
-    border: 1px solid black;
-    gap: .5rem;
-} */
-div.top-flex-unit,
-div.bottom-flex-unit {
-    /* border: 3px solid orange; */
-    display: flex;
-    height: 50%;
-    gap: .5rem;
-}
-
-div.right-container {
-    height: 100%;
-    width: 260px;
-}
-
+/* ---- */
 article.article-container {
     background: var(--LightGray);
     padding: 1rem;
@@ -144,42 +111,19 @@ article.article-container>div#bottom>p {
     color: var(--LightGray);
 }
 
-@media only screen and (max-width:700px) {
-    .container {
-        width: min(85%, 1200px);
-        margin: auto;
-        display: flex;
-        flex-flow: column;
+/* Updated code */
+@media only screen and (min-width:700px){
+    .container, .top-flex-unit, .bottom-flex-unit{
+        flex-direction: row;
         align-items: center;
-        position: relative;
-        border: .0625rem solid red;
-        height: 100% !important;
-        gap: 0;
-    }
-    div.left-container,
-    div.right-container {
-        margin: .5rem 0 .5rem 0;
-        flex: 0;
-        gap: 0;
-    }
-    div.top-flex-unit ,
-    div.bottom-flex-unit {
-        height: 100%;
-        flex-flow: column;
-        gap: 0;
-    }
-    div.left-container {
-        height: 100%;
-        margin: 2rem 0;
-    }
-    article.article-container {
-        margin: .5rem 0;
-        width: 100%;
     }
 
-    /* article.article-container { 
-        width: 100% !important; 
-        margin: .5rem 0;
-        flex: 1;
-    } */
+    .top-flex-unit, .bottom-flex-unit{
+        align-items: unset;
+    }
+
+    .right-container{
+        height: 100%;
+        max-width: 270px;
+    }
 }
