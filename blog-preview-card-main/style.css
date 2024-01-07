@@ -55,7 +55,7 @@ a {
     object-fit: cover;
 }
 
-.card>img+button {
+#card__btn {
     background-color: var(--Yellow);
     margin: 1rem 0;
     padding: .3rem .6rem;
