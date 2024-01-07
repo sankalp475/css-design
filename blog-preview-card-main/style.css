@@ -1,7 +1,7 @@
 :root {
     --Yellow: hsl(47, 88%, 63%);
     --White: hsl(0, 0%, 100%);
-    --Grey: hsl(0, 0%, 50%);
+    --Grey: hsl(0, 0%, 45.9%);
     --Black: hsl(0, 0%, 7%);
     --Figtree: 'Figtree', sans-serif;
 }
@@ -55,7 +55,7 @@ a {
     object-fit: cover;
 }
 
-.card>img+a {
+.card>img+button {
     background-color: var(--Yellow);
     margin: 1rem 0;
     padding: .3rem .6rem;
@@ -63,6 +63,8 @@ a {
     font-size: .7rem;
     border-radius: .2rem;
     display: inline-block !important;
+    outline: none;
+    border: none;
 }
 
 #card__btn+p {
@@ -80,6 +82,13 @@ a {
     display: flex;
     align-items: center;
     gap: .5rem;
+}
+
+.author>span {
+    color: var(--Black);
+    text-decoration: none;
+    font-weight: 800;
+    font-family: var(--Figtree);
 }
 
 .author>img {
