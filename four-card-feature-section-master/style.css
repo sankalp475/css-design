@@ -42,6 +42,10 @@ div.intro__uppergrid--container {
     font-size: 1.91rem;
 }
 
+.intro__heading span {
+    display: block;
+}
+
 .intro__heading--fw400 {
     font-weight: 200;
 }
@@ -53,7 +57,7 @@ div.intro__uppergrid--container {
     font-family: var(--Poppins);
     font-size: 1.2rem;
     padding: 0 .6rem;
-    /* width: 23rem; */
+    max-width: 40rem;
 }
 
 main.grid-container {
@@ -70,17 +74,16 @@ main.grid-container>div.grid__item {
     border-top: 4px solid var(--border-top);
     gap: 1rem;
 }
-     
-main.grid-container>div.grid__item 
-> h2 {
+
+main.grid-container>div.grid__item>h2 {
     padding: 0;
     margin: 0;
     font-family: var(--Poppins);
-    color:var(--VeryDarkBlue);
+    color: var(--VeryDarkBlue);
     grid-column: span 3;
 }
-main.grid-container>div.grid__item 
-> p {
+
+main.grid-container>div.grid__item>p {
     font-family: var(--Poppins);
     color: var(--GrayishBlue);
     margin: 0;
@@ -88,11 +91,13 @@ main.grid-container>div.grid__item
     line-height: 1.5rem;
     grid-column: span 3;
 }
-main.grid-container>div.grid__item > img {
+
+main.grid-container>div.grid__item>img {
     padding: 1rem 0;
     display: grid;
     grid-column: 3 / 4;
 }
+
 main.grid-container>div.grid__item:nth-child(1) {
     --border-top: var(--Cyan);
 }
@@ -111,6 +116,48 @@ main.grid-container>div.grid__item:nth-child(4) {
 
 @media (min-width: 70em) {
     body {
-      
+        display: grid;
+        place-content: center;
+        min-height: 100dvh;
+    }
+
+    section.intro {
+        padding: 2rem;
+        gap: 4rem;
+    }
+
+    main.grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 8.25rem);
+    }
+
+    .intro__heading {
+        font-size: 1.5rem;
+    }
+
+    .intro__paragraph {
+        font-size: 1rem;
+    }
+
+    .grid__item>h2 {
+        font-size: 1.2rem;
+    }
+
+    .grid__item:nth-child(1),
+    .grid__item:nth-child(4) {
+        grid-row: 2 / 4;
+    }
+
+    .grid__item:nth-child(2),
+    .grid__item:nth-child(3) {
+        grid-row: span 2;
+    }
+
+    .grid__item:nth-child(3) {
+        grid-column: 2 / 3;
+    }
+
+    .grid__item:nth-child(4) {
+        grid-column: 3 / 4;
     }
 }
