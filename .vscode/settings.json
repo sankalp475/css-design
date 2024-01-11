@@ -18,4 +18,5 @@
     },
     "editor.autoIndent": "advanced",
     "editor.detectIndentation": false,
+    "liveServer.settings.port": 5502,
 }
