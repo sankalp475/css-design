@@ -81,7 +81,7 @@ article.pricing button {
     width: 100%;
     appearance: none;
     border: none;
-    border-radius: .22rem;
+    border-radius: .5rem;
     padding: 1rem 0;
     font-size: 1.1rem;
     color: var(--LightGray);
