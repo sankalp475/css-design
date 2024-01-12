@@ -18,13 +18,16 @@ body {
 main {
     background: #fff;
     margin: 4rem 1rem;
-    border-radius: .5rem;
+    border-radius: .5rem !important;
+    overflow: hidden;
 }
 
 section.hero,
 article.pricing,
 article.feature {
     padding: 1.5rem;
+    overflow: hidden;
+    /* border-radius: .5rem; */
 }
 
 section.hero h1.hero__heading {
@@ -57,7 +60,7 @@ article.pricing>h2 {
 }
 
 article.pricing p.price {
-   margin: 1rem 0 .5rem 0;
+    margin: 1rem 0 .5rem 0;
 }
 
 article.pricing p.price span.ultra-large-txt {
@@ -96,13 +99,42 @@ article.feature {
     color: var(--LightGray);
 }
 
-article.feature > h2 {
+article.feature>h2 {
     font-size: 1.24rem;
     margin: 0 1rem 0 0;
 }
-article.feature > pre {
+
+article.feature>pre {
     font-family: var(--Karla);
     font-size: .95rem;
     line-height: 1.5rem;
     opacity: .9;
+}
+
+pre {
+    margin-bottom: 0;
+}
+
+@media (min-width: 760px) {
+    body {
+        display: grid;
+        margin: 0;
+        place-items: center;
+    }
+
+    main.grid-container {
+        display: grid;
+        margin: 4rem;
+        max-width: 40rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section.hero {
+        grid-column: 1 / 3;
+    }
+
+    section.hero {
+        padding: 1.5rem 2rem;
+    }
+
 }
