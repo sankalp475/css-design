@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap');
-
 :root {
     --Moderate-violet: hsl(263, 55%, 52%);
     --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
@@ -25,11 +23,13 @@ body {
     padding: 0;
     background: var(--LightGrayishBlue);
 }
-
+.container {
+    padding: 3rem 0;
+}
 /*! artical/content styling  */
 article.article-container {
     background: var(--LightGray);
-    padding: 1rem;
+    padding: 1.5rem;
     margin: 1rem;
     font-family: var(--ff-barlow);
     border-radius: .5rem;
@@ -42,7 +42,7 @@ article.article-container {
 article.DanielClifford {
     background: var(--Moderate-violet) url(./images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
-    background-position: top right 20%;
+    background-position: top right 10%;
 }
 
 article.JonathanWalters {
@@ -81,8 +81,8 @@ article.article-container>div#top>div.flex-name-feild {
 }
 
 article.article-container>div#top>div.flex-name-feild {
-
     color: inherit;
+    font-size: .9rem;
 }
 
 article.article-container>div#top>div.flex-name-feild :last-child {
@@ -90,12 +90,17 @@ article.article-container>div#top>div.flex-name-feild :last-child {
 }
 
 article.article-container>div#mid>h1 {
-    font-size: 1.9rem;
+    font-size: 1.1rem;
     color: inherit;
 }
 
 article.article-container>div#bottom>p {
-    font-size: 1.2rem;
+    font-size: .94rem;
     color: var(--LightGray);
+    line-height: 1.4rem;
 }
 
+article.JeanetteHarmon>div#bottom>p,
+article.KiraWhittle>div#bottom>p {
+   color: var(--VeryDarkGrayishBlue);
+}
