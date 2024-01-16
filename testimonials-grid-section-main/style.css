@@ -165,7 +165,7 @@ article.testimonial:nth-child(5)>div.testimonial-header-wrapper+p {
 
     article.testimonial {
         margin: 0;
-        padding: 1.2rem;
+        /* padding: 1.2rem; */
     }
 
 }
