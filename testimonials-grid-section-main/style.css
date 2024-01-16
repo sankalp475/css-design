@@ -1,17 +1,150 @@
-root {
-    --clr-primary-400: 263 55% 52%;
-    --clr-secondary-400: 217 19% 35%;
-    --clr-secondary-500: 219 29% 14%;
-    --clr-neutral-100: 0 0% 100%;
-    --clr-neutral-200: 210 46% 95%;
-    --clr-neutral-300: 0 0% 81%;
+:root {
 
+    --clr-moderate-Violet: hsl(263, 55%, 52%);
+    --clr-dark-gray-blue: hsl(217, 19%, 35%);
+    --clr-dark-BlackishBlue: hsl(219, 29%, 14%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-gray: hsl(0, 0%, 81%);
+    --clr-light-blue: hsl(210, 46%, 95%);
     --ff-primary: "Barlow Semi Condensed", sans-serif;
 
-    --fw-400: 500;
-    --fw-700: 600;
+    --fw-500: 500;
+    --fw-600: 600;
 
-    --fs-300: 0.6875rem;
-    --fs-400: 0.8125rem;
-    --fs-500: 1.25rem;
+    --fs-11: 11px;
+    --fs-13: 13px;
+    --fs-20: 20px;
+}
+
+body {
+    margin: 0;
+    font-family: var(--ff-primary);
+    background-color: var(--clr-light-blue);
+    padding: 4.4375rem 1.5rem 5.9375rem 1.5rem;
+}
+
+* {
+    font-family: var(--ff-primary);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+article.testimonial {
+    padding: 1.625rem 2rem 2rem 2rem;
+    margin: 1.5rem 0;
+    border-radius: .5rem;
+}
+
+article.testimonial>div.testimonial-header-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 1.0625rem;
+    margin-bottom: 18px;
+}
+
+article.testimonial>div.testimonial-header-wrapper img {
+    width: 1.75rem;
+    border-radius: 100%;
+}
+
+article.testimonial>div.testimonial-header-wrapper>div:has(img) {
+    --clr-light-gray: hsla(0, 0%, 81%, 0.486);
+    background-color: var(--clr-light-gray);
+    border-radius: 100%;
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+}
+
+article.testimonial>div.testimonial-header-wrapper h2.name {
+    font-size: var(--fs-13);
+    color: var(--clr-white);
+}
+
+article.testimonial>div.testimonial-header-wrapper p.position {
+    font-size: var(--fs-11);
+    color: var(--clr-light-gray);
+}
+
+article.testimonial>div.testimonial-header-wrapper+p {
+    color: var(--clr-white);
+    font-size: var(--fs-20);
+    font-weight: var(--fw-600);
+    /* width: 263px; */
+}
+
+article.testimonial>div.testimonial-header-wrapper+p+p {
+    font-size: var(--fs-13);
+    font-weight: var(--fw-500);
+    color: var(--clr-light-gray);
+    /* width: 247px; */
+}
+
+article.testimonial:nth-child(1) {
+    background-color: var(--clr-moderate-Violet);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-size: 102px 104px;
+    background-position: top right clamp(24px, 6vw, 80px);
+}
+
+article.testimonial:nth-child(1)>div.testimonial-header-wrapper+p {
+    margin-bottom: 40px;
+}
+
+article.testimonial:nth-child(2) {
+    background-color: var(--clr-dark-gray-blue);
+}
+
+article.testimonial:nth-child(3) {
+    background-color: var(--clr-white);
+}
+
+article.testimonial:nth-child(3)>div.testimonial-header-wrapper h2 {
+    color: var(--clr-dark-BlackishBlue);
+}
+
+article.testimonial:nth-child(3) div.testimonial-header-wrapper p,
+article.testimonial:nth-child(5) div.testimonial-header-wrapper p,
+article.testimonial:nth-child(3) div.testimonial-header-wrapper+p+p,
+article.testimonial:nth-child(5) div.testimonial-header-wrapper+p+p {
+    color: var(--clr-dark-gray-blue);
+}
+
+article.testimonial:nth-child(3)>div.testimonial-header-wrapper+p, 
+article.testimonial:nth-child(5)>div.testimonial-header-wrapper+p {
+    color: var(--clr-dark-BlackishBlue);
+}
+
+article.testimonial:nth-child(4) {
+    background-color: var(--clr-dark-BlackishBlue);
+}
+
+article.testimonial:nth-child(5) {
+    background-color: var(--clr-white);
+}
+
+
+article.testimonial:nth-child(2)>div.testimonial-header-wrapper+p, 
+article.testimonial:nth-child(3)>div.testimonial-header-wrapper+p, 
+article.testimonial:nth-child(4)>div.testimonial-header-wrapper+p, 
+article.testimonial:nth-child(5)>div.testimonial-header-wrapper+p {
+    margin-bottom: 16px;
 }
