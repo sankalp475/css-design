@@ -158,7 +158,7 @@ article.testimonial:nth-child(5)>div.testimonial-header-wrapper+p {
     }
 
     main.wrapper {
-        margin: 4.4375rem auto;
+        margin:0 auto;
         width: min(83%, 1110px);
         gap: 1.5rem;
     }
@@ -171,11 +171,6 @@ article.testimonial:nth-child(5)>div.testimonial-header-wrapper+p {
 }
 
 @media (min-width: 750px) and (max-width: 1028px) {
-    main.wrapper {
-        margin: 4.4375rem auto;
-        width: min(83%, 1110px);
-        gap: 1.5rem;
-    }
 
     main.grid-wrapper {
         display: grid;
